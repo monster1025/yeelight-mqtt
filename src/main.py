@@ -10,6 +10,7 @@ MQTT_PORT = os.getenv('MQTT_PORT', 1883)
 MQTT_USER = os.getenv('MQTT_USER', "")
 MQTT_PASS = os.getenv('MQTT_PASS', "")
 QUERY_TIME = os.getenv('QUERY_TIME', 3)
+PREFIX = os.getenv('PREFIX', 'home')
 
 ips = dict({
 	'192.168.1.51':'main-mono',
@@ -20,7 +21,7 @@ ips = dict({
 bulbs=[]
 processNow = False
  
-PATH_FMT = "xiaomi/{model}/{sid}/{prop}" # short_id or sid ?
+PATH_FMT = PREFIX + "/{model}/{sid}/{prop}" # short_id or sid ?
 
 def prepare_mqtt():
 	print("Connecting to MQTT server", MQTT_SERVER, ":", MQTT_PORT, "with username", MQTT_USER,":",MQTT_PASS)
@@ -85,7 +86,7 @@ def on_mqtt_message(client, userdata, msg):
 		processNow=True
 
 def on_connect(client, userdata, rc):
-	client.subscribe("xiaomi/lamp/+/+/set")
+	client.subscribe(PREFIX + "/lamp/+/+/set")
 
 def refresh_loop(client):
 	global processNow
