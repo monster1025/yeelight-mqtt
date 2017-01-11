@@ -1,0 +1,2 @@
+paho-mqtt
+pyyeelight==1.0-beta

@@ -1,3 +1,7 @@
+#docker-compose file, because it contains passwords
+docker-compose.yaml
+docker-compose.yml
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
