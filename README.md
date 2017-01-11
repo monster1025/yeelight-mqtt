@@ -1,6 +1,8 @@
 # Yeelight to MQTT bridge
 
 Works with Yeelight WiFi bulbs (color and monochrome).
+You need to edit you bulb IPs in main.py (not yet fixed).
+
 Sample docker-compose.yml file:
 ```
 yeelight:
@@ -16,8 +18,6 @@ yeelight:
 ```
 docker-compose build && docker-compose up -d
 ```
-
-You need to edit you bulb IPs in main.py (not yet fixed).
 
 ## Known bugs:
 - Lamp's alive status updated only at startup.
