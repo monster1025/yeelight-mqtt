@@ -1,0 +1,21 @@
+mqtt:
+  server: 127.0.0.1
+  port: 1883
+  username: mqttuser
+  password: passw0rd
+  prefix: home
+
+sids:
+  # lamps
+  192.168.1.51:
+    model: light
+    name: main-mono
+  192.168.1.54:
+    model: light
+    name: main-color
+  192.168.1.52:
+    model: light
+    name: kitchen
+  192.168.1.53: 
+    model: light
+    name: hall

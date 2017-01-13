@@ -1,0 +1,7 @@
+yeelight:
+  build: .
+  dockerfile: Dockerfile-i386
+  container_name: yeelight
+  volumes:
+    - "./config:/app/config"
+  restart: always

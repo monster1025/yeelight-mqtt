@@ -8,5 +8,4 @@ RUN pip install --upgrade pip && pip install -r /requirements.txt
 WORKDIR /app
 COPY src /app
 
-EXPOSE 5000
 CMD ["python", "-u", "/app/main.py"]
