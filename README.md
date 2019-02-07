@@ -1,7 +1,6 @@
 # Yeelight to MQTT bridge
 
 Works with Yeelight WiFi bulbs (color and monochrome).
-You need to edit you bulb IPs in main.py (not yet fixed).
 
 You need to activate developer mode (http://forum.yeelight.com/t/trying-to-enable-developer-mode-with-yeelight-app-lamp-always-offline/137)
 
